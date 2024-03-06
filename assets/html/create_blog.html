@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEKUP-BLOG-CREATE</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_editor.min.css" integrity="sha512-nE3o3phBEArbD2amu3pcDWO7fB2JB9c2Rxa2Bi4PYRwDax3UsaTRfFr1vfzn7ypYt5nU05Lwax18ls330TtBXw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_editor.pkgd.min.css" integrity="sha512-rHIbnxI7bJkaFuIU4ypQUzEdwrdSh3VP8aNImoPlFek1adiUJ3jBXUACas2zrqyS0G3FAqVS2qlF+zRWBRrOBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_style.min.css" integrity="sha512-ugyboWakw0RTZmHjKTJGC/5gdjpDZlY4lrJVviOtaaQ7naoNdCZrBX/9sg49Bi6/fMFVosKra0XyVC76270Usw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/plugins.pkgd.min.css" integrity="sha512-6JgJbKoaRb9B2rARsWmxK15xL3RM+NlWX/2rhtI8wp6L8VKgKXv6qnbY4yILsXSK0q/iBs0B3s0NkZLhGVlfyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+#btn_save{
+     background-color: cornflowerblue ;
+     color: white;
+     padding: .5rem 2rem;
+     margin-right: 2rem;
+     float: right;
+     border: none;
+     border-radius: .5rem;
+}
+
+</style>
+
+
+</head>
+
+<body class="light-theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+
+        <a href="#">
+          <img src="../images/logo-light.svg" alt="SimpleBlog logo" width="150" class="logo-light">
+          <img src="../images/logo-dark.svg" alt="SimpleBlog logo" width="150" class="logo-dark">
+        </a>
+
+        <div class="btn-group">
+
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="#" class="nav-link">Home</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="./assets/html/login.html" class="nav-link">Create Blog</a>
+            </li>
+
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div>
+
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+
+
+
+
+    <div class="main">
+
+
+        <div id="blog_designer" style="margin: 0 auto;padding:2rem;"></div>
+<button id="btn_save" > save </button>
+<a href="./created_blog_preview.html" id="goToPreview" style="display: none;"></a>
+    </div>
+
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="wrapper">
+
+        <a href="#" class="footer-logo">
+          <img src="../images/logo-light.svg" alt="SimpleBlog Logo" width="150" class="logo-light">
+          <img src="../images/logo-dark.svg" alt="SimpleBlog Logo" width="150" class="logo-dark">
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database management.
+        </p>
+
+      </div>
+
+      <div class="wrapper">
+
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+
+          <li>
+            <a href="#" class="footer-link">Advertise with us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="wrapper">
+
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Notice</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Cookie Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms Of Use</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <p class="copyright">
+      &copy; Copyright 2024 <a href="#">AHMED & WADII</a>
+    </p>
+
+  </footer>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/js/froala_editor.min.js" integrity="sha512-yPOpUhNntIRUVQib/cEJu0qXLE/BerbIPdtVtVia4J/2tyD1pIsmMhIU2u1ePc4V0nl10WfQIKicNHrT9fGMQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/js/froala_editor.pkgd.min.js" integrity="sha512-tlI1dnxW+rDI4P1G3fQbVKLNCUdfovipktWMZZGeu5LeCuK+3Y4BPKYny8YT82SBsLKF7FNy/uS0j2bYmm6Hbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/js/plugins.pkgd.min.js" integrity="sha512-2LhNRt6ouPnN1zvEpfQruCvQtin3KRFuqCz0tnIM9NSX6jYnjsCKJujj9jibCrbjdS1FMwg8owgX+I9vjic82g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  
+  
+  <script src="../js/script.js"></script>
+<script>
+let btn_save =document.getElementById('btn_save'); 
+btn_save.addEventListener('click',function(){
+
+        localStorage.setItem('created_blog',editor.html.get())
+        document.getElementById('goToPreview').click();
+    
+});
+  let editor =  new FroalaEditor('#blog_designer', {
+    events: {
+      "image.beforeUpload": function(files) {
+      var editor = this;
+       if (files.length) {
+         // Create a File Reader.
+         var reader = new FileReader();
+         // Set the reader to insert images when they are loaded.
+         reader.onload = function(e) {
+           var result = e.target.result;
+           editor.image.insert(result, null, null, editor.image.get());
+         };
+         // Read image as base64.
+         reader.readAsDataURL(files[0]);
+       }
+       editor.popups.hideAll();
+       // Stop default upload chain.
+       return false;
+      }
+    }
+  })
+</script>
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
