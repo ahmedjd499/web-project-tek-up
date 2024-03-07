@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEKUP-BLOG-CREATE</title>
+  <title>TEKUP-BLOG</title>
 
   <!--
     - favicon
@@ -22,27 +22,8 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"rel="stylesheet">
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_editor.min.css" integrity="sha512-nE3o3phBEArbD2amu3pcDWO7fB2JB9c2Rxa2Bi4PYRwDax3UsaTRfFr1vfzn7ypYt5nU05Lwax18ls330TtBXw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_editor.pkgd.min.css" integrity="sha512-rHIbnxI7bJkaFuIU4ypQUzEdwrdSh3VP8aNImoPlFek1adiUJ3jBXUACas2zrqyS0G3FAqVS2qlF+zRWBRrOBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_style.min.css" integrity="sha512-ugyboWakw0RTZmHjKTJGC/5gdjpDZlY4lrJVviOtaaQ7naoNdCZrBX/9sg49Bi6/fMFVosKra0XyVC76270Usw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/plugins.pkgd.min.css" integrity="sha512-6JgJbKoaRb9B2rARsWmxK15xL3RM+NlWX/2rhtI8wp6L8VKgKXv6qnbY4yILsXSK0q/iBs0B3s0NkZLhGVlfyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-  #preview{
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  padding: 2rem;
-  margin: 0 auto;
-  }
-
-</style>
-
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body class="light-theme">
@@ -80,15 +61,15 @@
           <ul class="desktop-nav">
 
             <li>
-              <a href="/" class="nav-link">Home</a>
+              <a href="/index.html" class="nav-link ">Home</a>
             </li>
 
             <li>
-              <a href="./about-us.html" class="nav-link">About us</a>
+              <a href="./about-us.html" class="nav-link active">About us</a>
             </li>
 
             <li>
-              <a href="./assets/html/login.html" class="nav-link">Create Blog</a>
+              <a href="./login.html" class="nav-link">Create Blog</a>
             </li>
 
           </ul>
@@ -112,15 +93,16 @@
 
             <ul>
               <li class="nav-item">
-                <a href="/index.html" class="nav-link">Home</a>
+                <a href="/index.html" class="nav-link ">Home</a>
               </li>
 
               <li class="nav-item">
-<a href="./about-us.html" class="nav-link">About us</a>              </li>
+                <a href="#" class="nav-link active">About us</a>
+              </li>
 
               <li class="nav-item">
-                <a href="./assets/html/login.html" class="nav-link">Create Blog</a>
-              </li>
+                <a href="./login.html" class="nav-link">Create Blog</a>
+            </li>
             </ul>
 
           </div>
@@ -159,20 +141,53 @@
 
   <main>
 
+    <!--
+      - #HERO SECTION
+    -->
 
+   <div class="hero">
 
+      <div class="container">
 
+        <div class="left">
 
-    <div class="main">
+          <h1 class="h1">
+            Hi, we're <br><b>AHMED&nbsp; & &nbsp; WADII</b>.
+            <br><span style="color: chocolate;">Web Developer</span> at<span style="color: chocolate;"> Umanlink-Group </span>
+          </h1>
 
+          <p class="h3">
+            Specialized in <abbr title="Front-end Angular">Front-End</abbr>
+             Web develepment with Angular
+          </p>
 
-      <div id="preview">
-        Here comes the HTML edited with the Froala rich text editor.
+          <div class="btn-group">
+            <a href="#" class="btn btn-primary">Contact us</a>
+            <a href="#" class="btn btn-secondary">About us</a>
+          </div>
+
         </div>
-        
+
+        <div class="right">
+
+          <div class="pattern-bg"></div>
+          <div class="img-box">
+            <img src="../images/hero.jpg" alt="Wadii  & Ahmed" class="hero-img">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div> 
 
 
-    </div>
+
+
+
+    
 
   </main>
 
@@ -260,19 +275,8 @@
   <!--
     - custom js link
   -->
-
-  
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-  
   <script src="../js/script.js"></script>
-<script>
 
-let content=localStorage.getItem('created_blog')
-if(content)
-  $('#preview').html(content);
-
-</script>
   <!--
     - ionicon link
   -->
