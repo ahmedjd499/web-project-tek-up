@@ -77,7 +77,7 @@
    * spacing 
    */
 
-  --py: 5rem;
+  --py: 2rem;
 
 }
 
@@ -339,7 +339,10 @@ header .btn-group {
   color: var(--foreground-secondary);
 }
 
-.mobile-nav .nav-link:hover { color: var(--accent); }
+.mobile-nav .nav-link:hover,.nav-link.active { 
+  color: var(--accent);
+  scale: 1.1;
+}
 
 
 
@@ -783,7 +786,9 @@ footer .wrapper { text-align: center; }
     font-weight: 700;
   }
 
-  .desktop-nav .nav-link:hover { color: var(--accent); }
+  .desktop-nav .nav-link:hover ,.nav-link.active { 
+    scale: 1.1;
+    color: var(--accent); }
 
   .theme-btn-desktop {
     position: relative;
