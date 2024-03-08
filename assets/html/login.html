@@ -60,6 +60,9 @@
         </section>
     </div>
     <script>
+        if(sessionStorage.getItem('user'))
+        document.querySelector('.form-group a').click(); // Programmatically click the link
+
         document.addEventListener('DOMContentLoaded', (event) => {
             // Select the form by its ID
             const form = document.getElementById('login-form');
@@ -74,6 +77,7 @@
                 if(form.checkValidity()) {
                     // Validation passed, simulate clicking on the hidden link
                     // Ensure your anchor has an ID for easy selection
+                    sessionStorage.setItem('user',"connected")
                     document.querySelector('.form-group a').style.display = 'inline'; // Make the link visible
                     document.querySelector('.form-group a').click(); // Programmatically click the link
                 } else {
