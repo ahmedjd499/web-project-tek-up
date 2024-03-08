@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>TEKUP-BLOG-CREATE</title>
+
+		<!--
+																				    - favicon
+																				  -->
+		<link
+		rel="shortcut icon" href="../images/logo.png" type="image/x-icon"/>
+
+		<!--
+																				    - custom css link
+																				  -->
+		<link
+		rel="stylesheet" href="../css/style.css"/>
+
+		<!--
+																				    - google font link
+																				  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_editor.min.css" integrity="sha512-nE3o3phBEArbD2amu3pcDWO7fB2JB9c2Rxa2Bi4PYRwDax3UsaTRfFr1vfzn7ypYt5nU05Lwax18ls330TtBXw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_editor.pkgd.min.css" integrity="sha512-rHIbnxI7bJkaFuIU4ypQUzEdwrdSh3VP8aNImoPlFek1adiUJ3jBXUACas2zrqyS0G3FAqVS2qlF+zRWBRrOBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/froala_style.min.css" integrity="sha512-ugyboWakw0RTZmHjKTJGC/5gdjpDZlY4lrJVviOtaaQ7naoNdCZrBX/9sg49Bi6/fMFVosKra0XyVC76270Usw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/css/plugins.pkgd.min.css" integrity="sha512-6JgJbKoaRb9B2rARsWmxK15xL3RM+NlWX/2rhtI8wp6L8VKgKXv6qnbY4yILsXSK0q/iBs0B3s0NkZLhGVlfyg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+		<style>
+			.fr-element.fr-view {
+				width: 80%;
+				max-width: 100%;
+				overflow: hidden;
+				padding: 2rem;
+				margin: 0 auto;
+				background-color: white;
+				border-radius: 0.5rem;
+
+			}
+		</style>
+	</head>
+
+	<body
+		class="light-theme">
+		<!--
+																				    - #HEADER
+																				  -->
+
+		<header>
+			<div class="container">
+				<nav class="navbar">
+					<a href="/index.html">
+						<img src="../images/light.png" alt="SimpleBlog logo" width="150" class="logo-light"/>
+						<img src="../images/dark.png" alt="SimpleBlog logo" width="150" class="logo-dark"/>
+					</a>
+
+					<div class="btn-group">
+						<button class="theme-btn theme-btn-mobile light">
+							<ion-icon name="moon" class="moon"></ion-icon>
+							<ion-icon name="sunny" class="sun"></ion-icon>
+						</button>
+
+						<button class="nav-menu-btn">
+							<ion-icon name="menu-outline"></ion-icon>
+						</button>
+					</div>
+
+					<div class="flex-wrapper">
+						<ul class="desktop-nav">
+							<li>
+								<a href="/index.html" class="nav-link">Home</a>
+							</li>
+
+							<li>
+								<a href="./about-us.html" class="nav-link">About us</a>
+							</li>
+
+							<li>
+								<a href="./login.html" class="nav-link">Create Blog</a>
+							</li>
+						</ul>
+
+						<button class="theme-btn theme-btn-desktop light">
+							<ion-icon name="moon" class="moon"></ion-icon>
+							<ion-icon name="sunny" class="sun"></ion-icon>
+						</button>
+					</div>
+
+					<div class="mobile-nav">
+						<button class="nav-close-btn">
+							<ion-icon name="close-outline"></ion-icon>
+						</button>
+
+						<div class="wrapper">
+							<p class="h3 nav-title">Main Menu</p>
+
+							<ul>
+								<li class="nav-item">
+									<a href="/index.html" class="nav-link">Home</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">About Me</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">Contact</a>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<p class="h3 nav-title">Topics</p>
+
+							<ul>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Database</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">Accessibility</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">Web Performance</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="main">
+				<div id="preview" class="fr-element fr-view">
+					<header style="box-sizing: border-box; display: block; margin: 24px auto var(--content-gap); color: rgb(30, 30, 30); font-family: -apple-system, BlinkMacSystemFont, &quot;segoe ui&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;open sans&quot;, &quot;helvetica neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" id="isPasted">
+						<h1 style="box-sizing: border-box; color: var(--primary); line-height: 1.2; margin-top: 0px; margin-bottom: 2px; font-size: 40px;">NextJs: How to fetch data from an API?</h1>
+						<div style="box-sizing: border-box; color: var(--secondary); font-size: 14px; display: flex; flex-wrap: wrap;">
+							<span title="2022-10-29 15:20:37 +0530 +0530" style="box-sizing: border-box;">October 29, 2022</span>
+							· 5 min</div>
+					</header>
+					<div style="box-sizing: border-box; margin: 0px 2px 40px; border: 1px solid var(--border); background: var(--code-bg); border-radius: var(--radius); padding: 0.4em; color: rgb(30, 30, 30); font-family: -apple-system, BlinkMacSystemFont, &quot;segoe ui&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;open sans&quot;, &quot;helvetica neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+						<details style="box-sizing: border-box;">
+							<summary accesskey="c" title="(Alt + C)" style="box-sizing: border-box; cursor: zoom-in; margin-inline-start: 20px;">
+								<span style="box-sizing: border-box; display: inline; font-weight: 500;">Table of Contents</span>
+							</summary>
+							<div style="box-sizing: border-box; margin: 0px 20px; padding: 10px 20px;">
+								<ul style="box-sizing: border-box; padding: 0px; margin: 0px;">
+									<li style="box-sizing: border-box;">
+										<a href="https://compiletab.com/nextjs-fetch-data-external-api/#fetching-data-using-the-getstaticprops" style="box-sizing: border-box; color: var(--primary); text-decoration: none;"></a>
+									</li>
+									<li style="box-sizing: border-box;">
+										<a href="https://compiletab.com/nextjs-fetch-data-external-api/#fetching-data-using-the-getserversideprops" style="box-sizing: border-box; color: var(--primary); text-decoration: none;"></a>
+									</li>
+								</ul>
+							</div>
+						</details>
+					</div>
+					<div style="box-sizing: border-box; color: var(--content); font-family: -apple-system, BlinkMacSystemFont, &quot;segoe ui&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;open sans&quot;, &quot;helvetica neue&quot;, sans-serif; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">We will start by creating a NextJs app using the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">creat-next-app</code>
+							command. I will be using&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">npx</code>
+							to create a new project called my-pokemon-app. For this tutorial, we will be making use of the Pokemon API(<a href="https://pokeapi.co/" style="box-sizing: border-box; color: var(--primary); text-decoration: none; box-shadow: 0px 1px 0px;">https://pokeapi.co/</a>) to demonstrate how to consume external APIs using NextJs.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="shell" style="box-sizing: border-box; direction: ltr; display: block; overflow-x: auto; background: var(--hljs-bg) !important; color: rgb(213, 213, 214); padding: 10px; margin: auto 0px; font-size: 0.85em; line-height: 1.5; border-radius: var(--radius); word-break: break-all;">npx create-next-app@latest my-pokemon-app
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Let’s navigate to our project and open the code in the editor of our choice.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="shell" style="box-sizing: border-box; direction: ltr; display: block; overflow-x: auto; background: var(--hljs-bg) !important; color: rgb(213, 213, 214); padding: 10px; margin: auto 0px; font-size: 0.85em; line-height: 1.5; border-radius: var(--radius); word-break: break-all;">cd my-pokemon-app
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">You can notice, the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">create-next-app</code>
+							creates a bunch of folders and files necessary for us to run a NextJs project.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-folder-structure.jpg" alt="nextjs folder structure" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">To check if everything is set up without any issues, we will run the next server using the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">npm run dev</code>
+							command in the terminal. This should start the application on port 3000 by default&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">http://localhost:3000/</code>.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-default-home-page.jpg" alt="nextjs default home page" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The above content is displayed using the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pages/index.js</code>
+							file. For the purpose of this tutorial, we will be using this file to display some of the Pokemon characters using the Pokemon API. Let’s clean up this file and delete any code that we don’t require.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">You can simply copy the below code into your&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pages/index.js</code>
+							file.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">import</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Head</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">from</span> <span style="box-sizing: border-box; color: rgb(230, 219, 116);">"next/head"</span>;
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">import</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">from</span> <span style="box-sizing: border-box; color: rgb(230, 219, 116);">"../styles/Home.module.css"</span>;
+
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">default</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Home</span>() {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> (
+    &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">container</span>}&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">Head</span>&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">title</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">App</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">title</span>&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">meta</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"description"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">content</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"Fetch api data using NextJs"</span> /&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">link</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">rel</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"icon"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">href</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"/favicon.ico"</span> /&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">Head</span>&gt;
+
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">main</span>}&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">title</span>}&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">App</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">using</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Next</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">js</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">!</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span>&gt;
+    &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span>&gt;
+  );
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The page should now look something like this:</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-api-pokemon.jpg" alt="nextjs api pokemon" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Now that we have set up our NextJs app, we can now work on getting the data from the Pokemon API. NextJs provides three different functions to fetch data into our app. They are&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticProps</code>,&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>
+							and&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticPaths</code>. We will first look at the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticProps</code>
+							method.</p>
+						<h2 style="box-sizing: border-box; color: var(--primary); line-height: 1.2; margin: 32px auto 24px; font-size: 32px;">Fetching data using the getStaticProps</h2>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticProps</code>
+							function is used when you want to pre-render the content at the build time. This function gets executed on the server side and pre-fetches all the content even before the user request’s the data.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">We will pre-fetch some of the Pokemon characters using the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticProps</code>
+							function and display it on our index page.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Let’s add the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticProps</code>
+							function below the Home() function (you can also add it at the top, it does not matter).</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">import</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Head</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">from</span> <span style="box-sizing: border-box; color: rgb(230, 219, 116);">"next/head"</span>;
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">import</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">from</span> <span style="box-sizing: border-box; color: rgb(230, 219, 116);">"../styles/Home.module.css"</span>;
+
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">default</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Home</span>() {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> (
+    &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">container</span>}&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">Head</span>&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">title</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">App</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">title</span>&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">meta</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"description"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">content</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"Fetch api data using NextJs"</span> /&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">link</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">rel</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"icon"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">href</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"/favicon.ico"</span> /&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">Head</span>&gt;
+
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">main</span>}&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">title</span>}&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">App</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">using</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Next</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">js</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">!</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span>&gt;
+    &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span>&gt;
+  );
+}
+
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">async</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">getStaticProps</span>() {
+
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> {
+    <span style="box-sizing: border-box; color: rgb(166, 226, 46);">props</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">:</span> {
+
+    }
+  }
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getStaticProps</code>
+							returns&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">props</code>
+							that contain the data fetched from the external API. We can use this data to display on the client side.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">We will use the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">fetch</code>
+							to call the pokemon API and store the result in&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pokemons</code>
+							which can be used to pass as props to the client side.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">async</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">getStaticProps</span>() {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">const</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">res</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">await</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">fetch</span>(<span style="box-sizing: border-box; color: rgb(230, 219, 116);">"https://pokeapi.co/api/v2/pokemon"</span>);
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">const</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemons</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">await</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">res</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">json</span>();
+
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> {
+    <span style="box-sizing: border-box; color: rgb(166, 226, 46);">props</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">:</span> {
+      <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemons</span>
+    },
+  };
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The props&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pokemons</code>
+							can now be used in the Home() function to display the content.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">default</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Home</span>({ <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemons</span> }) {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">const</span> { <span style="box-sizing: border-box; color: rgb(166, 226, 46);">results</span> } <span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemons</span>;
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> (
+    &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">container</span>}&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">Head</span>&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">title</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">App</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">title</span>&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">meta</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"description"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">content</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"Fetch api data using NextJs"</span> /&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">link</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">rel</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"icon"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">href</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"/favicon.ico"</span> /&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">Head</span>&gt;
+
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">main</span>}&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">title</span>}&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">App</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">using</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">Next</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">js</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">!</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;
+        
+        {<span style="box-sizing: border-box; color: rgb(166, 226, 46);">results</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">map</span>((<span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>) =&gt; (
+          &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">grid</span>} <span style="box-sizing: border-box; color: rgb(166, 226, 46);">key</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>}&gt;
+            &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">a</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">href</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"/"</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">card</span>}&gt;
+              &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h2</span>&gt;{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>} <span style="box-sizing: border-box; color: rgb(249, 38, 114);">&amp;</span><span style="box-sizing: border-box; color: rgb(166, 226, 46);">rarr</span>;&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h2</span>&gt;
+            &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">a</span>&gt;
+          &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span>&gt;
+        ))}
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span>&gt;
+    &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span>&gt;
+  );
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The API response contains a&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">results</code>
+							array which contains the name of the 20 pokemons by default. We have destructured the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">results</code>
+							array and looped through them using the map() method. If everything goes well your app should now display the names of pokemons from the API.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-list-pokemon-api-external.jpg" alt="nextjs list pokemon api external" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<h2 style="box-sizing: border-box; color: var(--primary); line-height: 1.2; margin: 32px auto 24px; font-size: 32px;">Fetching data using the getServerSideProps</h2>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>
+							function uses a server-side rendering technique. If NextJs finds a&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>
+							function declared within a page, it will pre-render the page every time the request is made to that page with the data returned by&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>. This function always runs on the server side.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">To demonstrate&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>
+							function, we will create a dynamic page route which will list the details of individual Pokemon. In this case, we will fetch the data using&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">We will start by creating a new folder within the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pages</code>
+							folder and name it&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pokemon</code>. Within the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">pokemon</code>
+							folder we will create another folder&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">[id]</code>
+							which will help us with the dynamic routing. Lastly, we will create a file&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">index.js</code>
+							inside the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">[id]</code>
+							folder that will call the&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>
+							function.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-nested-routing.jpg" alt="nextjs nested routing" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Let’s create a new function pokemon in the newly created index.js file.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">default</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>() {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> (
+    &lt;&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">This should help us access the route like ‘/pokemon/xxx’</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-pokemon.jpg" alt="nextjs pokemon" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Next, we will update the link on the home page to point to the dynamic routes. We will use the name of the pokemon as the id. Open the /pages/index.js and replace the href value to point to the dynamic route.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;">{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">results</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">map</span>((<span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>) =&gt; (
+    &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">grid</span>} <span style="box-sizing: border-box; color: rgb(166, 226, 46);">key</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>}&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">a</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">href</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(230, 219, 116);">"pokemon/"</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">+</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>} <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">card</span>}&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h2</span>&gt;{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">result</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>} <span style="box-sizing: border-box; color: rgb(249, 38, 114);">&amp;</span><span style="box-sizing: border-box; color: rgb(166, 226, 46);">rarr</span>;&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h2</span>&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">a</span>&gt;
+    &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span>&gt;
+  ))}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Let’s go ahead and add the getServerSideProps function in the pokemon/[id]/index.js</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">default</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>() {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> (
+    &lt;&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span>&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;
+    &lt;/&gt;
+  );
+}
+
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">async</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">getServerSideProps</span>(<span style="box-sizing: border-box; color: rgb(166, 226, 46);">context</span>) {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> {
+    <span style="box-sizing: border-box; color: rgb(166, 226, 46);">props</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">:</span> {},
+  };
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">The&nbsp;<code style="box-sizing: border-box; direction: ltr; margin: auto 4px; padding: 4px 6px; font-size: 0.85em; line-height: 1.5; background: var(--code-bg); border-radius: 2px; color: rgb(235, 87, 87);">getServerSideProps</code>
+							takes a context parameter which is an object containing keys like params, req, res, query etc. Since we are using dynamic routing, we will make use of the params key to get the ‘id’.</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">Let’s call the URL to fetch the individual data as follows:</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">async</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">getServerSideProps</span>(<span style="box-sizing: border-box; color: rgb(166, 226, 46);">context</span>) {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">const</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">id</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">context</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">params</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">id</span>;
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">const</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">res</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">await</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">fetch</span>(<span style="box-sizing: border-box; color: rgb(230, 219, 116);">`https://pokeapi.co/api/v2/pokemon/</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">${</span><span style="box-sizing: border-box; color: rgb(166, 226, 46);">id</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">}</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">`</span>);
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">const</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">await</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">res</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">json</span>();
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> {
+    <span style="box-sizing: border-box; color: rgb(166, 226, 46);">props</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">:</span> { <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span> },
+  };
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">We can now use the pokemon props to display the content.</p>
+						<div style="box-sizing: border-box; position: relative; margin: 10px auto; border-radius: var(--radius); direction: ltr; background: var(--hljs-bg) !important;">
+							<pre style="box-sizing: border-box; position: relative; margin: 0px; color: rgb(248, 248, 242); background-color: rgb(39, 40, 34); tab-size: 4;"><code data-lang="react" style="box-sizing: border-box; direction: ltr; margin: auto 0px; padding: 10px; font-size: 0.85em; line-height: 1.5; background: var(--hljs-bg) !important; border-radius: var(--radius); color: rgb(213, 213, 214); display: block; overflow-x: auto; word-break: break-all;"><span style="box-sizing: border-box; color: rgb(102, 217, 239);">import</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">from</span> <span style="box-sizing: border-box; color: rgb(230, 219, 116);">"../../../styles/Home.module.css"</span>;
+
+<span style="box-sizing: border-box; color: rgb(102, 217, 239);">export</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">default</span> <span style="box-sizing: border-box; color: rgb(102, 217, 239);">function</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>({ <span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span> }) {
+  <span style="box-sizing: border-box; color: rgb(102, 217, 239);">return</span> (
+    &lt;&gt;
+      &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">main</span>}&gt;
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Pokemon</span> <span style="box-sizing: border-box; color: rgb(249, 38, 114);">-</span> {<span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>}&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">h1</span>&gt;
+
+        &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span> <span style="box-sizing: border-box; color: rgb(166, 226, 46);">className</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">styles</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">card</span>}&gt;
+          &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">img</span>
+            <span style="box-sizing: border-box; color: rgb(166, 226, 46);">src</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">sprites</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">other</span>[<span style="box-sizing: border-box; color: rgb(230, 219, 116);">"official-artwork"</span>].<span style="box-sizing: border-box; color: rgb(166, 226, 46);">front_default</span>}
+            <span style="box-sizing: border-box; color: rgb(166, 226, 46);">alt</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span>{<span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">name</span>}
+            <span style="box-sizing: border-box; color: rgb(166, 226, 46);">width</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"200"</span>
+            <span style="box-sizing: border-box; color: rgb(166, 226, 46);">height</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">=</span><span style="box-sizing: border-box; color: rgb(230, 219, 116);">"200"</span>
+          /&gt;
+          &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">p</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Height</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">:</span> {<span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">height</span>}&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">p</span>&gt;
+          &lt;<span style="box-sizing: border-box; color: rgb(249, 38, 114);">p</span>&gt;<span style="box-sizing: border-box; color: rgb(166, 226, 46);">Weight</span><span style="box-sizing: border-box; color: rgb(249, 38, 114);">:</span> {<span style="box-sizing: border-box; color: rgb(166, 226, 46);">pokemon</span>.<span style="box-sizing: border-box; color: rgb(166, 226, 46);">weight</span>}&lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">p</span>&gt;
+        &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">div</span>&gt;
+      &lt;/<span style="box-sizing: border-box; color: rgb(249, 38, 114);">main</span>&gt;
+    &lt;/&gt;
+  );
+}
+</code></pre>
+						</div>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-pokemon-getserversideprops-1.jpg" alt="nextjs pokemon getserversideprops 1" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-pokemon-getserversideprops-2.jpg" alt="nextjs pokemon getserversideprops 2" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><img data-fr-image-pasted="true" src="https://compiletab.com/img/nextjs-pokemon-getserversideprops-3.jpg" alt="nextjs pokemon getserversideprops 3" style="box-sizing: border-box; max-width: 100%; border-radius: 4px;" class="fr-fil fr-dib"></p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);">code:
+							<a href="https://github.com/kushald/my-pokemon-app" style="box-sizing: border-box; color: var(--primary); text-decoration: none; box-shadow: 0px 1px 0px;">https://github.com/kushald/my-pokemon-app</a>
+						</p>
+						<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: var(--content-gap);"><br></p>
+					</div>
+				</div>
+			</div>
+		</body>
+	</body>
+</html></main><!--
+										    - #FOOTER
+										  --><footer>
+<div class="container">
+	<div class="wrapper">
+		<a href="#" class="footer-logo">
+			<img src="../images/light.png" alt="SimpleBlog Logo" width="150" class="logo-light"/>
+			<img src="../images/dark.png" alt="SimpleBlog Logo" width="150" class="logo-dark"/>
+		</a>
+
+		<p class="footer-text">
+			Learn about Web accessibility, Web performance, and Database
+																			management.
+		</p>
+	</div>
+
+	<div class="wrapper">
+		<p class="footer-title">Quick Links</p>
+
+		<ul>
+			<li><a href="#" class="footer-link">Advertise with us</a></li>
+
+			<li><a href="#" class="footer-link">About us</a></li>
+
+			<li><a href="#" class="footer-link">Contact Us</a></li>
+		</ul>
+	</div>
+
+	<div class="wrapper">
+		<p class="footer-title">Legal Stuff</p>
+
+		<ul>
+			<li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+			<li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+			<li><a href="#" class="footer-link">Terms Of Use</a></li>
+		</ul>
+	</div>
+</div>
+
+<p class="copyright">
+	&copy; Copyright 2024
+	<a href="#">AHMED & WADII</a>
+</p></footer><script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/js/froala_editor.min.js" integrity="sha512-yPOpUhNntIRUVQib/cEJu0qXLE/BerbIPdtVtVia4J/2tyD1pIsmMhIU2u1ePc4V0nl10WfQIKicNHrT9fGMQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/js/froala_editor.pkgd.min.js" integrity="sha512-tlI1dnxW+rDI4P1G3fQbVKLNCUdfovipktWMZZGeu5LeCuK+3Y4BPKYny8YT82SBsLKF7FNy/uS0j2bYmm6Hbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.1.4/js/plugins.pkgd.min.js" integrity="sha512-2LhNRt6ouPnN1zvEpfQruCvQtin3KRFuqCz0tnIM9NSX6jYnjsCKJujj9jibCrbjdS1FMwg8owgX+I9vjic82g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!--
+					
+										    - custom js link
+										  --><script src="../js/script.js"></script><!--
+										    - ionicon link
+										  --><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script></body></html>
