@@ -234,7 +234,7 @@ html {
   color: var(--foreground-secondary);
 }
 
-.dark-theme #blog_designer *,#preview * {
+.dark-theme #blog_designer *{
   background: var(--action-primary);
   color: var(--foreground-secondary);
 }
